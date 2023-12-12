@@ -6,7 +6,7 @@ enum Items
 {
     woodenSword,
     woodenShield,
-    oldPot
+    bicycleHelmet
 }
 public class InventoryManager : MonoBehaviour
 {
