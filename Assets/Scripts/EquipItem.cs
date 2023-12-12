@@ -7,6 +7,7 @@ public class EquipItem : MonoBehaviour
     [SerializeField] private GameObject EquipCheckPanel;
     private InventoryManager inventoryManager;
     private bool ItemEquip;
+    private GameObject Item;
     private void Start()
     {
         inventoryManager = InventoryManager.instance;
@@ -14,16 +15,18 @@ public class EquipItem : MonoBehaviour
     }
     public void Equip()
     {
-        GameObject Item = transform.Find("IsEquip").gameObject;
+        Item = transform.Find("IsEquip").gameObject;
         EquipCheckPanel.SetActive(true);
+
+    }
+    public void EquipIconOn()
+    {
         if (Item != null)
         {
             if (Item.activeSelf == true)
             {
                 Debug.Log("Equip아이콘을 뺌");
-
                 Item.SetActive(false);
-
             }
             else
             {
@@ -32,9 +35,5 @@ public class EquipItem : MonoBehaviour
             }
         }
         else {Debug.Log("아이템 장착여부 아이콘이 없습니다.");};
-    }
-    public void EquipIconOn()
-    {
-
     }
 }

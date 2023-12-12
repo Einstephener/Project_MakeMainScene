@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject IsEquip;
 
 
+    List<GameObject> HideBtnList = new List<GameObject>(); 
     private void Awake()
     {
         instance = this;
