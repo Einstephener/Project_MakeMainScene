@@ -14,9 +14,12 @@ public enum StatsChangeType
 public class CharacterStats
 {
     public StatsChangeType statsChangeType;
-    [Range(1f, 20f)] public float Attack;
-    [Range(1f, 20f)] public float Defence;
-    [Range(1, 100)] public int maxHealth;
-    [Range(1, 100)] public int Critical;
-    public int PlayerGold;
+    public float Attack;
+    public float Defence;
+    public int maxHealth;
+    public int Critical;
+    public int PlayerGold = 10000;
+    public int CharacterLevel = 9;
+    public float CharacterExperience = 8f;
+    //임시 값 저장
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EquipItem : MonoBehaviour
 {
     private InventoryManager inventoryManager;
-    
+    private bool ItemEquip;
     private void Start()
     {
         inventoryManager = InventoryManager.instance;
@@ -19,7 +19,9 @@ public class EquipItem : MonoBehaviour
             if (Item.activeSelf == true)
             {
                 Debug.Log("Equip버튼이있음");
+                ItemEquip = true;   
                 Item.SetActive(false);
+
             }
             else
             {
@@ -27,5 +29,6 @@ public class EquipItem : MonoBehaviour
                 Item.SetActive(true);
             }
         }
+        else {Debug.Log("아이템 장착여부 아이콘이 없습니다.");};
     }
 }
