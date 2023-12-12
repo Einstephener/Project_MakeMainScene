@@ -1,9 +1,10 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EquipItem : MonoBehaviour
 {
+    [SerializeField] private GameObject EquipCheckPanel;
     private InventoryManager inventoryManager;
     private bool ItemEquip;
     private void Start()
@@ -14,21 +15,26 @@ public class EquipItem : MonoBehaviour
     public void Equip()
     {
         GameObject Item = transform.Find("IsEquip").gameObject;
+        EquipCheckPanel.SetActive(true);
         if (Item != null)
         {
             if (Item.activeSelf == true)
             {
-                Debug.Log("Equip¹öÆ°ÀÌÀÖÀ½");
-                ItemEquip = true;   
+                Debug.Log("Equipì•„ì´ì½˜ì„ ëºŒ");
+
                 Item.SetActive(false);
 
             }
             else
             {
-                Debug.Log("Equip¹öÆ°ÀÌ ¾øÀ½");
+                Debug.Log("Equipì•„ì´ì½˜ì„ í‚´");
                 Item.SetActive(true);
             }
         }
-        else {Debug.Log("¾ÆÀÌÅÛ ÀåÂø¿©ºÎ ¾ÆÀÌÄÜÀÌ ¾ø½À´Ï´Ù.");};
+        else {Debug.Log("ì•„ì´í…œ ì¥ì°©ì—¬ë¶€ ì•„ì´ì½˜ì´ ì—†ìŠµë‹ˆë‹¤.");};
+    }
+    public void EquipIconOn()
+    {
+
     }
 }

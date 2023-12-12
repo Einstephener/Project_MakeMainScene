@@ -13,8 +13,6 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager instance;
     [SerializeField] private GameObject IsEquip;
 
-    public bool ItemEquip;
-
 
     private void Awake()
     {
