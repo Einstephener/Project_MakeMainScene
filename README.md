@@ -35,19 +35,19 @@ Chapter 3-2 Unity 게임개발 숙련 개인과제입니다.
       - 상점 버튼 추가
       
         
-##### 개발환경
+### 개발환경
 - 윈도우 10
 - 화면 비율 : [16:9]
 - visual studio 2022
 - unity 2022.3.2f1 / C#
   
 
-##### 사용한 에셋
+### 사용한 에셋
 - https://assetstore.unity.com/packages/2d/environments/free-platform-game-assets-85838
 - https://assetstore.unity.com/packages/2d/characters/2d-character-sprite-animation-penguin-236747
 
 
-##### 게임 설명
+### 게임 설명
 
 ![image](https://github.com/Einstephener/Project_MakeMainScene/assets/128495083/a937afc9-d865-43e1-bc99-838207a3b8e5)
 
@@ -61,7 +61,7 @@ Chapter 3-2 Unity 게임개발 숙련 개인과제입니다.
 - 미리 설정해놓은 아이템 갯수만큼 상점란에 아이템 구매창이 뜨도록 만들었습니다.
 
 
-##### 자체 피드백
+### 자체 피드백
 - 캐릭터 스탯 변동 부분을 구현하지 못했습니다.
 - 아이템을 획득해야지 인벤토리가 해금되도록 하는 부분을 구현하지 못했습니다.
 - 아이템 정보를 상점창에 연동되도록 만들지 못했습니다.
