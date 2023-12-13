@@ -8764,7 +8764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEquip: {fileID: 1564416793520492981, guid: b20d4c68b79284744ab89d26bd1ec651, type: 3}
-  ShopItemUIPrefabs: {fileID: 5045408976257965300, guid: a90e8fdcf0accf24a9e394b2a27e4b48, type: 3}
+  ShopItemUIPrefabs: {fileID: 868160929524770255, guid: a90e8fdcf0accf24a9e394b2a27e4b48, type: 3}
   ShopScreen: {fileID: 1672666659}
   woodenSwordImage: {fileID: 0}
   woodenShieldImage: {fileID: 0}
@@ -8783,7 +8783,7 @@ Transform:
   m_GameObject: {fileID: 1412826646}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 527.03876, y: 283.14655, z: 0.12073375}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

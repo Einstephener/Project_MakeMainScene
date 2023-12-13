@@ -1,13 +1,13 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
 
 public class Item
 {
-    public string ItemName { get; } // ¾ÆÀÌÅÛ ÀÌ¸§
-    public int ItemGold { get; } // ¾ÆÀÌÅÛ °¡°İ
-    public string ItemDescription { get; } // ¾ÆÀÌÅÛ »ó¼¼ ¼³¸í
+    public string ItemName { get; } // ì•„ì´í…œ ì´ë¦„
+    public int ItemGold { get; } // ì•„ì´í…œ ê°€ê²©
+    public string ItemDescription { get; } // ì•„ì´í…œ ìƒì„¸ ì„¤ëª…
 
     public Item(string itemName, int itemGold, string itemDescription)
     {
@@ -16,12 +16,12 @@ public class Item
         ItemDescription = itemDescription;
     }
 }
-public class Weapon : Item    // ¹«±â Å¬·¡½º (¾ÆÀÌÅÛÀ» »ó¼Ó¹ŞÀ½)
+public class Weapon : Item    // ë¬´ê¸° í´ë˜ìŠ¤ (ì•„ì´í…œì„ ìƒì†ë°›ìŒ)
 {
-    public int ItemStr { get; } // °ø°İ·Â
-    public int ItemDef { get; } // °ø°İ·Â
-    public int ItemHp { get; } // Ã¼·Â
-    public bool isEquipped { get; set; } //ÀåÂø¿©ºÎ
+    public int ItemStr { get; } // ê³µê²©ë ¥
+    public int ItemDef { get; } // ê³µê²©ë ¥
+    public int ItemHp { get; } // ì²´ë ¥
+    public bool isEquipped { get; set; } //ì¥ì°©ì—¬ë¶€
 
     public Weapon(string itemName, int itemGold, string itemDescription, int itemStr, int itemDef, int itemHp, bool isEquipped = false)
         : base(itemName, itemGold, itemDescription)

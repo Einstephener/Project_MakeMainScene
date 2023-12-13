@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,5 +21,5 @@ public class CharacterStats
     public int PlayerGold = 10000;
     public int CharacterLevel = 9;
     public float CharacterExperience = 8f;
-    //ÀÓ½Ã °ª ÀúÀå
+    //ìž„ì‹œ ê°’ ì €ìž¥
 }
