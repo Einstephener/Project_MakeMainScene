@@ -15,16 +15,16 @@ public class EquipItem : MonoBehaviour
     {
         if (Item != null)
         {
-            EquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.RemoveAllListeners();
-            UnEquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.RemoveAllListeners();
+            EquipCheckPanel.GetComponent<PopUpControl>().Yes.onClick.RemoveAllListeners();
+            UnEquipCheckPanel.GetComponent<PopUpControl>().Yes.onClick.RemoveAllListeners();
             if (Item.activeSelf == true) //끄기
             {
-                UnEquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.AddListener(EquipIconOff);
+                UnEquipCheckPanel.GetComponent<PopUpControl>().Yes.onClick.AddListener(EquipIconOff);
                 UnEquipCheckPanel.SetActive(true);
             }
             else
             {
-                EquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.AddListener(EquipIconOn);
+                EquipCheckPanel.GetComponent<PopUpControl>().Yes.onClick.AddListener(EquipIconOn);
                 EquipCheckPanel.SetActive(true);
             }
             

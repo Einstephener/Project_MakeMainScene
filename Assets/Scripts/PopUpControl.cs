@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipCheck : MonoBehaviour
+public class PopUpControl : MonoBehaviour
 {
     [SerializeField] private GameObject popup;
-    [SerializeField] public Button Yes;
+    public Button Yes;
 
     public void ClickBtn()
     {
