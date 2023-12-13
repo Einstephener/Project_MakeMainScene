@@ -5,35 +5,38 @@ using UnityEngine;
 public class EquipItem : MonoBehaviour
 {
     [SerializeField] private GameObject EquipCheckPanel;
-    private InventoryManager inventoryManager;
-    private bool ItemEquip;
+    [SerializeField] private GameObject UnEquipCheckPanel;
     private GameObject Item;
-    private void Start()
+    private void Awake()
     {
-        inventoryManager = InventoryManager.instance;
-
+        Item = transform.Find("IsEquip").gameObject;
     }
     public void Equip()
     {
-        Item = transform.Find("IsEquip").gameObject;
-        EquipCheckPanel.SetActive(true);
-
-    }
-    public void EquipIconOn()
-    {
         if (Item != null)
         {
-            if (Item.activeSelf == true)
+            EquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.RemoveAllListeners();
+            UnEquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.RemoveAllListeners();
+            if (Item.activeSelf == true) //끄기
             {
-                Debug.Log("Equip아이콘을 뺌");
-                Item.SetActive(false);
+                UnEquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.AddListener(EquipIconOff);
+                UnEquipCheckPanel.SetActive(true);
             }
             else
             {
-                Debug.Log("Equip아이콘을 킴");
-                Item.SetActive(true);
+                EquipCheckPanel.GetComponent<EquipCheck>().Yes.onClick.AddListener(EquipIconOn);
+                EquipCheckPanel.SetActive(true);
             }
+            
         }
-        else {Debug.Log("아이템 장착여부 아이콘이 없습니다.");};
+    }
+
+    public void EquipIconOff()
+    {
+        Item.SetActive(false);
+    }
+    public void EquipIconOn()
+    {
+        Item.SetActive(true);
     }
 }
