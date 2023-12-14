@@ -6,28 +6,23 @@ using UnityEngine.UI;
 
 public class LevelUp : MonoBehaviour
 {
-    private CharacterStats characterStats = new CharacterStats();
 
     [SerializeField] private Slider experienceGaugeSlider;
     [SerializeField] private TMP_Text levelTxt;
+    [SerializeField] private UserData userData;
 
     private float experience;
     private int level;
 
-
-    private void Awake()
-    {
-       //characterStats = GetComponent<CharacterStats>();
-    }
     private void Start()
-    {
-        experience = characterStats.CharacterExperience;
-        level = characterStats.CharacterLevel;
-
+    {        
         LevelUpdate();
     }
     private void LevelUpdate()
-    {        
+    {
+        experience = userData.exp;
+        level = userData.userLV;
+
         RequiredExperience();
     }
     
