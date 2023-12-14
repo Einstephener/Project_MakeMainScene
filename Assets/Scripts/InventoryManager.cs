@@ -25,6 +25,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] public Sprite[] ItemImages;
     [SerializeField] public Sprite[] InventoryImages;
 
+    public GameData gameData;
 
     List<GameObject> HideBtnList = new List<GameObject>();
 
@@ -33,13 +34,7 @@ public class InventoryManager : MonoBehaviour
         new Weapon("목검", 100, "초보자의 검. 나무로 만들었다.", 10, 0,  5),
         new Weapon("나무 방패", 100, "초보자의 방패. 나무로 만들었다.", 0, 10, 5),
         new Weapon("상점템 1", 100, "111111111111111111.", 0, 10, 5),
-        new Weapon("상점템 2", 100, "1111111111111111111111.", 0, 10, 5),
-        new Weapon("상점템 3", 100, "111111111111111111111.", 0, 10, 5),
-        new Weapon("상점템 4", 100, "111111111111111111111111", 0, 10, 5),
-        new Weapon("상점템 5", 100, "111111111111111111111111.", 0, 10, 5),
-        new Weapon("상점템 6", 100, "1111111111111111111111111111", 0, 10, 5),
-        new Weapon("상점템 7", 100, "1111111111111111111111111111.", 0, 10, 5),
-        new Weapon("상점템 8", 100, "111111111111111111111111111111", 0, 10, 5)
+      new Weapon("상점템 8", 100, "111111111111111111111111111111", 0, 10, 5)
     };
     private void Awake()
     {
